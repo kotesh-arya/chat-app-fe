@@ -12,7 +12,7 @@ import {
   Checkbox,
   Select,
 } from "@chakra-ui/react";
-import backgroundImage from "../../assets/maevl-chatting.jpg";
+import backgroundImage from "../../assets/maevl-chatting-edited.png";
 const Signup = () => {
   const [show, setShow] = useState(false);
   const handleClick = () => setShow(!show);
@@ -29,18 +29,18 @@ const Signup = () => {
       centerContent
     >
       <Box
-        margin="auto"
+        marginTop="20px"
         bg="rgba(255, 255, 255, 0.2)"
         backdropFilter="blur(8px)"
         borderRadius="xl"
-        padding="20"
+        padding="10"
         boxShadow="2xl"
         flexDir="column"
         alignItems="center"
         justifyContent="center"
         rounded="xl"
         color="black"
-        maxW="2xl"
+        maxW="xl"
         centerContent
       >
         <FormControl
@@ -48,8 +48,11 @@ const Signup = () => {
           as="fieldset"
           flexDir="column"
           justifyContent="space-between"
-          height={"380px"}
+          height={"300px"}
         >
+          <Heading as="h3" size="lg" textAlign="center" mb={1}>
+            REGISTER
+          </Heading>
           <InputGroup>
             <Input variant="flushed" placeholder="Email *" size="lg" />
           </InputGroup>
@@ -68,31 +71,26 @@ const Signup = () => {
             />
           </InputGroup>
           <InputGroup
-            width={"450px"}
+            width={"330px"}
             display={"flex"}
             justifyContent={"space-between"}
           >
-            <Select width={"120px"} variant="filled" placeholder="Day">
+            <Select width={"100px"} variant="filled" placeholder="Day">
               <option value="option1"> 1</option>
               <option value="option2"> 2</option>
               <option value="option3"> 3</option>
             </Select>
-            <Select width={"120px"} variant="filled" placeholder="Month">
+            <Select width={"100px"} variant="filled" placeholder="Month">
               <option value="option1">January</option>
               <option value="option2">February</option>
               <option value="option3">March</option>
             </Select>
-            <Select width={"120px"} variant="filled" placeholder="Year">
+            <Select width={"100px"} variant="filled" placeholder="Year">
               <option value="option1">2021</option>
               <option value="option2">2022</option>
               <option value="option3">2023</option>
             </Select>
           </InputGroup>
-          <Stack spacing={5} direction="row">
-            <Checkbox colorScheme="green" defaultChecked>
-              Send me Emails regarding updated and releases
-            </Checkbox>
-          </Stack>
         </FormControl>
       </Box>
     </Container>
